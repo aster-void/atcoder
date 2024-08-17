@@ -24,11 +24,7 @@ test-suite = "{{ manifest_dir }}/testcases/{{ bin_alias }}.yml"
 src = '''
 #![allow(unused_imports)]
 use itertools::{iproduct, Itertools};
-use num_traits::pow;
-use proconio::{
-    fastout, input,
-    marker::{Chars, Usize1},
-};
+use proconio::{ fastout, input };
 use std::cmp::{max, min};
 use std::collections::{HashMap, HashSet, VecDeque};
 use std::iter::FromIterator;
@@ -37,7 +33,8 @@ use std::iter::FromIterator;
 fn main() {
     input!{
     }
-    println!("Hello, World!");
+    let result = 0;
+    println!("{}", result);
 }
 '''
 
@@ -140,7 +137,7 @@ path = "./{{ contest }}"
 
 [test]
 # Toolchain for the test. (optional)
-toolchain = "1.42.0"
+# toolchain = "1.70.0"
 # Profile for `cargo build`. ("dev" | "release")
 #
 # Defaults to `"dev"`.
@@ -149,7 +146,7 @@ toolchain = "1.42.0"
 [submit]
 kind = "file"
 path = "{{ src_path }}"
-language_id = "4050"
+language_id = "5054"
 #[submit]
 #kind = "command"
 #args = ["cargo", "equip", "--exclude-atcoder-crates", "--resolve-cfgs", "--remove", "docs", "--minify", "libs", "--rustfmt", "--check", "--bin", "{{ bin_name }}"]
