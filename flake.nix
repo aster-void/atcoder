@@ -20,7 +20,8 @@
           ];
 
           shellHook = ''
-            alias ccp="cargo compete"
+            export CARGO=`which cargo`
+            alias ccp="cargo-compete compete"
           '';
         };
       }
